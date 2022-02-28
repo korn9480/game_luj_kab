@@ -1,0 +1,12 @@
+exp
+*.import
+.mono
+*.tres
+default_env
+*.zip
+*.cfg
+icon.png
+luj_kab_draw.csproj
+luj_kab_draw.sln
+project.godot
+fonts

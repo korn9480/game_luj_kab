@@ -1,0 +1,1813 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scritps/Ninja/Ninja.cs" type="Script" id=1]
+[ext_resource path="res://image/นินจา.png" type="Texture" id=2]
+[ext_resource path="res://scritps/Ninja/ThrowingStars.cs" type="Script" id=3]
+[ext_resource path="res://effect/ยิง.mp3" type="AudioStream" id=4]
+[ext_resource path="res://scritps/Ninja/NinjaType.cs" type="Script" id=5]
+[ext_resource path="res://effect/โดน เสียงพ่อ.mp3" type="AudioStream" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50, 10 )
+
+[sub_resource type="Animation" id=2]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 15.3507, 13.0147 ), Vector2( 15.3507, 13.0147 ), Vector2( 15.3507, 13.0147 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -29.9716, -42.4322 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.314972, 117.173 ), Vector2( -0.314972, 117.173 ), Vector2( -0.314972, 117.173 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 80.1896, 114.791 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.420441, 161.032 ), Vector2( 0.420441, 161.032 ), Vector2( 0.420441, 161.032 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 6.5, 6.5, 6.5 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -14.3495, 11.3461 ), Vector2( -14.3495, 11.3461 ), Vector2( -14.3495, 11.3461 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -23.0, -50.6966, -62.4513 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45.8585, 109.502 ), Vector2( -45.8585, 109.502 ), Vector2( -45.8585, 109.502 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 110.0, 192.63, 226.653 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 162.727, -3.3797 ), Vector2( 162.727, -3.3797 ), Vector2( 162.727, -3.3797 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -77.6, -77.6, -77.6 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15.3507, 13.0147 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -42.4322 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.314972, 117.173 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 114.791 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.420441, 161.032 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.5 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -14.3495, 11.3461 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -62.4513 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -45.8585, 109.502 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 226.653 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 162.727, -3.3797 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -77.6 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15.3507, 13.0147 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.314972, 117.173 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.5 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.420441, 161.032 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -14.3495, 11.3461 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -23.0002 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -45.8585, 109.502 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 110.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 162.727, -3.3797 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -77.6 ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -14.3495, 11.3461 ), Vector2( -14.3495, 11.3461 ), Vector2( -14.3495, 11.3461 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -1.66984, -49.031, -1.66984 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45.8585, 109.502 ), Vector2( -45.8585, 109.502 ), Vector2( -45.8585, 109.502 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 110.0, 110.0, 110.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 162.727, -3.3797 ), Vector2( 162.727, -3.3797 ), Vector2( 162.727, -3.3797 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -77.6, -77.6, -77.6 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 15.3507, 13.0147 ), Vector2( 15.3507, 13.0147 ), Vector2( 15.3507, 13.0147 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -24.7108, 21.4591, -24.7108 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.314972, 117.173 ), Vector2( -0.314972, 117.173 ), Vector2( -0.314972, 117.173 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.420441, 161.032 ), Vector2( 0.420441, 161.032 ), Vector2( 0.420441, 161.032 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 6.5, 6.5, 6.5 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา/RemoteTransform2D:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -106.0, -106.0, -70.5599, -24.7819, 30.0331, 88.864 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา/RemoteTransform2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 37.7739, 32.6807 ), Vector2( 37.7739, 32.6807 ), Vector2( 16.9636, 35.1495 ), Vector2( 9.87224, 21.5219 ), Vector2( 5.89796, -4.47661 ), Vector2( 28.2433, -29.242 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/body/sword/thumb_hend:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -127.646, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -123.617, -57.7539 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา/RemoteTransform2D:use_global_coordinates")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา/RemoteTransform2D:remote_path")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ NodePath("../../../../../../ดาบ") ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา/RemoteTransform2D:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, -1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.471954, 84.9487 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.471924, 105.714 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.471954, 84.9487 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.471924, 105.714 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("NodeBody/Skeleton/ดาบ:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -59.8023, -268.226 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("NodeBody/Skeleton/ดาบ:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0002 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา/RemoteTransform2D:remote_path")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ NodePath("") ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("NodeBody/body/sword/thumb_hend:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("NodeBody/body/left_arm/heand_two:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("NodeBody/body/left_arm/heand_one:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -77.6 ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.5 ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("CollisionShape2D:disabled")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("NodeBody/Skeleton/ดาบ/RemoteTransform2D:use_global_coordinates")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("NodeBody/Skeleton/ดาบ/RemoteTransform2D:remote_path")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ NodePath("../../../../../swordNinja") ]
+}
+
+[sub_resource type="Animation" id=9]
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -4.71936, 79.2854 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 93.3755 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 15.3507, 13.0147 ), Vector2( 15.3507, 13.0147 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -2.9348, -2.9348 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 108.184, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -14.3495, 11.3461 ), Vector2( -14.3495, 11.3461 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -54.4965, -26.9401 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45.8585, 109.502 ), Vector2( -45.8585, 109.502 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 249.518, 111.597 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.314972, 117.173 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 41.9609 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -44.4834 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("CollisionShape2D:disabled")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "over_stop"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 93.3755 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -2.9348 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 41.9609 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -26.9401 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 111.597 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -44.4834 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CollisionShape2D:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 13.6873, -90.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.471954, 84.9487 ), Vector2( 0.471954, 84.9487 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -133.851, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.471924, 105.714 ), Vector2( -0.471924, 105.714 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 13.9917, 90.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/body/left_arm/heand_two:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("NodeBody/body/left_arm/heand_one:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Ninja" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="swordNinja" type="KinematicBody2D" parent="."]
+position = Vector2( -60.1041, -266.579 )
+rotation = 1.5708
+collision_layer = 64
+collision_mask = 0
+
+[node name="sword" type="Area2D" parent="swordNinja"]
+collision_layer = 64
+collision_mask = 6
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="swordNinja/sword"]
+polygon = PoolVector2Array( 96.8173, 2.98792, 93.6992, -7.70285, 165.862, -18.3939, 256.734, -36.2122, 258.515, -33.0941, 250.943, -25.0759, 234.016, -14.3851, 120.426, 2.98784 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="swordNinja"]
+polygon = PoolVector2Array( 96.8173, 2.98792, 93.6992, -7.70285, 139.538, -14.494, 165.862, -18.3939, 256.734, -36.2122, 258.515, -33.0941, 250.943, -25.0759, 234.016, -14.3851, 120.426, 2.98784 )
+
+[node name="Bot" type="KinematicBody2D" parent="."]
+collision_layer = 32
+script = ExtResource( 1 )
+speed = 200
+jum = 500
+down = 10
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bot"]
+polygon = PoolVector2Array( 0.78183, -286.343, -17.2291, -281.046, -27.2939, -269.391, -29.9426, -258.797, -30.4724, -242.905, -35.7697, -226.483, -50.0724, -219.597, -59.6076, -202.116, -64.3752, -170.861, -62.2562, -152.851, -59.0779, -109.942, -53.2508, -59.6178, -41.582, -2.96449, 35.7441, -3.32982, 46.8685, -63.1895, 46.3387, -140.53, 24.09, -171.784, 28.3279, -192.444, 32.036, -192.444, 36.8036, -216.812, 46.8685, -220.52, 40.5117, -242.768, 39.9819, -261.845, 34.1549, -272.44, 12.4359, -285.683 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bot"]
+position = Vector2( 10.6908, 296.669 )
+shape = SubResource( 1 )
+
+[node name="Foot" type="AnimationPlayer" parent="Bot"]
+anims/jum = SubResource( 2 )
+anims/jum_stop = SubResource( 3 )
+anims/stand = SubResource( 4 )
+anims/walk = SubResource( 5 )
+
+[node name="Action" type="AnimationPlayer" parent="Bot"]
+anims/dodge = SubResource( 6 )
+anims/fencing = SubResource( 7 )
+anims/not_action = SubResource( 8 )
+anims/over = SubResource( 9 )
+anims/over_stop = SubResource( 10 )
+anims/throwing_stars = SubResource( 11 )
+
+[node name="NodeBody" type="Node2D" parent="Bot"]
+
+[node name="damage" type="RayCast2D" parent="Bot/NodeBody"]
+position = Vector2( 310.033, -162.632 )
+rotation = -1.5708
+scale = Vector2( 90, 1 )
+enabled = true
+cast_to = Vector2( 0, 940 )
+
+[node name="move" type="RayCast2D" parent="Bot/NodeBody"]
+position = Vector2( 5.66327, -77.8829 )
+rotation = -1.5708
+scale = Vector2( 170, 1 )
+enabled = true
+cast_to = Vector2( 0, 300 )
+collision_mask = 131
+
+[node name="areaBody" type="Area2D" parent="Bot/NodeBody"]
+collision_layer = 32
+collision_mask = 6
+
+[node name="body" type="CollisionPolygon2D" parent="Bot/NodeBody/areaBody"]
+position = Vector2( 6, 0 )
+polygon = PoolVector2Array( -43.1442, -229.172, -37.8469, -241.356, -36.7875, -262.546, -23.0144, -280.027, -1.29544, -287.443, 11.9478, -284.794, 25.7209, -277.378, 36.3155, -267.843, 39.4939, -257.248, 38.4344, -232.881, 41.0831, -217.518, 36.3155, -213.281, 31.5479, -209.572, 29.9587, -196.859, 24.6614, -189.972, 19.8938, -183.616, 14.0668, -172.491, 28.3695, -153.421, 37.9047, -136.469, 37.9047, -111.572, 35.7858, -81.3774, 33.1371, -47.4746, 32.0777, -23.6367, 29.429, -9.8482, 27.8398, -5.08062, 24.6614, 1.27616, -34.6685, 1.27616, -46.8524, 1.27616, -54.7983, -7.19954, -57.9767, -10.3779, -65.9227, -43.751, -71.22, -76.0646, -78.6362, -171.115, -80.2254, -227.797, -80.2254, -267.527, -71.22, -268.586, -64.8632, -266.467, -63.8038, -161.58 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bot/NodeBody/areaBody"]
+polygon = PoolVector2Array( -50.6021, 7.60439, -55.3697, 29.8531, -54.3103, 65.8748, -50.6021, 100.837, -44.7751, 158.578, -37.8886, 200.427, -31.5318, 236.448, -29.4129, 282.675, -38.9481, 286.383, -45.8346, 300.686, -45.3048, 304.394, 70.1766, 304.923, 47.3982, 291.15, 23.5603, 283.734, 25.6792, 237.118, 46.8685, 106.274, 50.5766, 73.4307, 53.2252, 34.2811, 46.3387, 2.49722 )
+
+[node name="fencing" type="Area2D" parent="Bot/NodeBody"]
+collision_layer = 32
+collision_mask = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bot/NodeBody/fencing"]
+polygon = PoolVector2Array( 123.964, 207.552, 182.484, 207.552, 264.601, 204.72, 323.121, 180.179, 390.812, 116.14, 428.567, 34.0233, 447.445, -40.5428, 418.453, -94.488, 392.024, -169.054, 336.335, -231.35, 267.433, -270.993, 200.418, -297.736, 148.504, -288.297, 37.1273, -226.946, 8.81104, -198.629, 7.86719, -84.4206, 13.5305, 66.5993, 37.1273, 136.919, 78.6578, 182.225 )
+
+[node name="body" type="Node2D" parent="Bot/NodeBody"]
+
+[node name="right_arm" type="Node2D" parent="Bot/NodeBody/body"]
+
+[node name="heand" type="Polygon2D" parent="Bot/NodeBody/body/right_arm"]
+position = Vector2( -346.99, 1.01102 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 350, 100, 320, 60, 320, 40, 330, 30, 340, 20, 350, 20, 360, 30, 380, 50, 370, 70, 370, 90, 350, 40, 370, 40 )
+uv = PoolVector2Array( 350, 100, 320, 60, 320, 40, 330, 30, 340, 20, 350, 20, 360, 30, 380, 50, 370, 70, 370, 90, 350, 40, 370, 40 )
+polygons = [ PoolIntArray( 10, 2, 3, 4, 5 ), PoolIntArray( 10, 11, 6, 5 ), PoolIntArray( 2, 10, 11, 7, 8, 9, 0, 1 ) ]
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1 ) ]
+internal_vertex_count = 2
+
+[node name="right_arm" type="Polygon2D" parent="Bot/NodeBody/body/right_arm"]
+position = Vector2( -275.926, -175.312 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 250, 220, 250, 130, 250, 120, 250, 110, 250, 40, 250, 30, 260, 20, 270, 10, 290, 20, 300, 30, 300, 110, 300, 120, 300, 130, 300, 230, 250, 230, 280, 110, 280, 120, 280, 130 )
+uv = PoolVector2Array( 250, 220, 250, 130, 250, 120, 250, 110, 250, 40, 250, 30, 260, 20, 270, 10, 290, 20, 300, 30, 300, 110, 300, 120, 300, 130, 300, 230, 250, 230, 280, 110, 280, 120, 280, 130 )
+polygons = [ PoolIntArray( 3, 15, 16, 2 ), PoolIntArray( 2, 16, 17, 1 ), PoolIntArray( 15, 10, 11, 16 ), PoolIntArray( 17, 12, 11, 16 ), PoolIntArray( 3, 4, 5, 6, 7, 8, 9, 10 ), PoolIntArray( 1, 17, 12, 13, 14, 0 ) ]
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+internal_vertex_count = 3
+
+[node name="finger" type="Polygon2D" parent="Bot/NodeBody/body/right_arm"]
+position = Vector2( -356.387, -48.8938 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 370, 150, 350, 150, 330, 140, 320, 130, 330, 120, 350, 120, 370, 130 )
+uv = PoolVector2Array( 370, 150, 350, 150, 330, 140, 320, 130, 330, 120, 350, 120, 370, 130 )
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ) ]
+
+[node name="leg_left" type="Polygon2D" parent="Bot/NodeBody/body"]
+position = Vector2( -361.48, -343.884 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 300, 450, 300, 470, 310, 490, 320, 540, 320, 580, 320, 620, 320, 630, 310, 640, 310, 660, 430, 660, 440, 650, 430, 640, 390, 620, 390, 610, 390, 580, 400, 520, 400, 490, 410, 470, 410, 440, 420, 390, 410, 340, 390, 330, 320, 330, 300, 350, 350, 450, 350, 470, 350, 490, 350, 630, 350, 620, 380, 630, 350, 330, 350, 360, 410, 360 )
+uv = PoolVector2Array( 300, 450, 300, 470, 310, 490, 320, 540, 320, 580, 320, 620, 320, 630, 310, 640, 310, 660, 430, 660, 440, 650, 430, 640, 390, 620, 390, 610, 390, 580, 400, 520, 400, 490, 410, 470, 410, 440, 420, 390, 410, 340, 390, 330, 320, 330, 300, 350, 350, 450, 350, 470, 350, 490, 350, 630, 350, 620, 380, 630, 350, 330, 350, 360, 410, 360 )
+polygons = [ PoolIntArray( 0, 24, 25, 1 ), PoolIntArray( 2, 1, 25, 26 ), PoolIntArray( 25, 17, 18, 24 ), PoolIntArray( 26, 16, 17, 25 ), PoolIntArray( 5, 28, 27, 6 ), PoolIntArray( 28, 12, 29, 27 ), PoolIntArray( 16, 15, 14, 13, 12, 5, 4, 3, 2, 26 ), PoolIntArray( 6, 7, 8, 9, 10, 11, 12, 29, 27 ), PoolIntArray( 23, 31, 30, 22 ), PoolIntArray( 31, 30, 21, 20, 32 ), PoolIntArray( 23, 31, 32, 19, 18, 24, 0 ) ]
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0 ) ]
+internal_vertex_count = 9
+
+[node name="leg_right" type="Polygon2D" parent="Bot/NodeBody/body"]
+position = Vector2( -522.576, -343.275 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 570, 500, 570, 480, 580, 460, 580, 340, 550, 330, 480, 330, 470, 350, 470, 460, 480, 480, 480, 500, 490, 620, 490, 630, 470, 650, 500, 660, 610, 660, 600, 640, 560, 620, 560, 540, 520, 630, 520, 620, 540, 630, 520, 460, 520, 480, 520, 500, 520, 330, 520, 360, 580, 360 )
+uv = PoolVector2Array( 570, 500, 570, 490, 580, 460, 580, 340, 550, 330, 480, 330, 470, 350, 470, 460, 480, 480, 480, 510, 490, 620, 490, 630, 470, 650, 500, 660, 610, 660, 600, 640, 560, 620, 560, 540, 520, 630, 520, 620, 540, 630, 520, 460, 520, 480, 520, 500, 520, 330, 520, 360, 580, 360 )
+polygons = [ PoolIntArray( 7, 21, 22, 8 ), PoolIntArray( 9, 23, 22, 8 ), PoolIntArray( 0, 23, 22, 1 ), PoolIntArray( 2, 21, 22, 1 ), PoolIntArray( 17, 0, 23, 9, 10, 19, 16 ), PoolIntArray( 10, 19, 18, 11 ), PoolIntArray( 19, 16, 20, 18 ), PoolIntArray( 11, 12, 13, 14, 15, 16, 20, 18 ), PoolIntArray( 6, 5, 24, 25 ), PoolIntArray( 24, 4, 3, 26, 25 ), PoolIntArray( 7, 6, 25, 26, 2, 21 ) ]
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0.5, 1, 0.5, 0, 1, 1, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+internal_vertex_count = 9
+
+[node name="sword" type="Polygon2D" parent="Bot/NodeBody/body"]
+position = Vector2( -251.948, -676.487 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 210, 670, 200, 650, 180, 500, 180, 400, 200, 400, 210, 420, 210, 540, 230, 660, 230, 670, 220, 680 )
+uv = PoolVector2Array( 210, 670, 200, 650, 180, 500, 180, 400, 200, 400, 210, 420, 210, 540, 230, 660, 230, 670, 220, 680 )
+bones = [ NodePath("ดาบ"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ/หัว"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="thumb_hend" type="Polygon2D" parent="Bot/NodeBody/body/sword"]
+visible = false
+position = Vector2( -104.598, 544.863 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 360, 200, 350, 210, 340, 210, 330, 200, 340, 180, 350, 170, 360, 180, 370, 190 )
+uv = PoolVector2Array( 360, 200, 350, 210, 340, 210, 330, 200, 340, 180, 350, 170, 360, 180, 370, 190 )
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ) ]
+
+[node name="chest" type="Polygon2D" parent="Bot/NodeBody/body"]
+position = Vector2( -98.261, -571.324 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 140, 580, 50, 580, 30, 460, 20, 400, 40, 390, 50, 380, 70, 370, 100, 380, 130, 400, 150, 420, 160, 440, 150, 550 )
+uv = PoolVector2Array( 140, 580, 50, 580, 30, 460, 20, 400, 40, 390, 50, 380, 70, 370, 100, 380, 130, 400, 150, 420, 160, 440, 150, 550 )
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ/หัว"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="left_arm" type="Node2D" parent="Bot/NodeBody/body"]
+position = Vector2( 13, 0 )
+
+[node name="heand_two" type="Polygon2D" parent="Bot/NodeBody/body/left_arm"]
+visible = false
+position = Vector2( -68.4221, -187.629 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 30, 260, 30, 250, 30, 230, 50, 210, 70, 210, 80, 230, 80, 250, 80, 290, 70, 300, 60, 300, 50, 280, 40, 270, 30, 270, 50, 230 )
+uv = PoolVector2Array( 30, 260, 30, 250, 30, 230, 50, 210, 70, 210, 80, 230, 80, 250, 80, 290, 70, 300, 60, 300, 50, 280, 40, 270, 30, 270, 50, 230 )
+polygons = [ PoolIntArray( 2, 13, 3 ), PoolIntArray( 2, 1, 12, 11, 10, 9, 8, 7, 6, 5, 13 ), PoolIntArray( 3, 4, 5, 13 ) ]
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 ) ]
+internal_vertex_count = 1
+
+[node name="heand_one" type="Polygon2D" parent="Bot/NodeBody/body/left_arm"]
+position = Vector2( -78.7765, -102.534 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 90, 140, 40, 140, 40, 190, 70, 210, 90, 200, 100, 190 )
+uv = PoolVector2Array( 90, 140, 40, 140, 40, 190, 70, 210, 90, 200, 100, 190 )
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 1, 1, 1, 1, 1, 1 ) ]
+
+[node name="left_arm" type="Polygon2D" parent="Bot/NodeBody/body/left_arm"]
+position = Vector2( -178.003, -176.597 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../../Skeleton")
+polygon = PoolVector2Array( 140, 220, 140, 30, 160, 10, 170, 10, 190, 30, 190, 220, 190, 230, 140, 230, 160, 110, 160, 120, 160, 130, 190, 110, 190, 130, 190, 120, 140, 110, 140, 120, 140, 130 )
+uv = PoolVector2Array( 140, 220, 140, 30, 160, 10, 170, 10, 190, 30, 190, 220, 190, 230, 140, 230, 160, 110, 160, 120, 160, 130, 190, 110, 190, 130, 190, 120, 140, 110, 140, 120, 140, 130 )
+polygons = [ PoolIntArray( 14, 8, 9, 15 ), PoolIntArray( 8, 11, 13, 9 ), PoolIntArray( 16, 10, 9, 15 ), PoolIntArray( 10, 12, 13, 9 ), PoolIntArray( 14, 1, 2, 3, 4, 11, 8 ), PoolIntArray( 16, 0, 7, 6, 5, 12, 10 ) ]
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+internal_vertex_count = 9
+
+[node name="collar" type="Polygon2D" parent="Bot/NodeBody/body"]
+position = Vector2( -221.425, -549.348 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 120, 380, 130, 360, 140, 340, 180, 320, 200, 310, 210, 340, 260, 350, 270, 360, 250, 390, 220, 380, 200, 370, 190, 370, 160, 380, 130, 390 )
+uv = PoolVector2Array( 120, 380, 130, 360, 140, 340, 180, 320, 200, 310, 210, 340, 260, 350, 270, 360, 250, 390, 220, 380, 200, 370, 190, 370, 150, 380, 130, 390 )
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ/หัว"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="header" type="Polygon2D" parent="Bot/NodeBody/body"]
+position = Vector2( -56.4488, -310.559 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton")
+polygon = PoolVector2Array( 30, 50, 30, 40, 40, 30, 60, 20, 80, 20, 100, 30, 110, 40, 120, 60, 120, 80, 110, 100, 100, 120, 90, 130, 50, 120, 20, 100, 20, 80, 30, 60 )
+uv = PoolVector2Array( 30, 50, 30, 40, 40, 30, 60, 20, 80, 20, 100, 30, 110, 40, 120, 60, 120, 80, 110, 100, 100, 120, 90, 130, 50, 120, 20, 100, 20, 80, 30, 60 )
+bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา/เท้าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย/มือซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("กระดูกสันหลัง/หน้าอก/คอ/หัว"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ) ]
+
+[node name="Skeleton" type="Skeleton2D" parent="Bot/NodeBody"]
+
+[node name="ดาบ" type="Bone2D" parent="Bot/NodeBody/Skeleton"]
+position = Vector2( -60.1041, -266.579 )
+rotation = 1.5708
+rest = Transform2D( -0.0139622, 0.999903, -0.999903, -0.0139622, -59.7036, -266.985 )
+default_length = 100.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/ดาบ"]
+remote_path = NodePath("../../../../../swordNinja")
+
+[node name="กระดูกสันหลัง" type="Bone2D" parent="Bot/NodeBody/Skeleton"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="ข้อต่อขาขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="ต้นขาขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา"]
+position = Vector2( 15.3507, 13.0147 )
+rotation = -0.740582
+rest = Transform2D( 1, 0, 0, 1, 15.3507, 13.0147 )
+
+[node name="ขาขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา"]
+position = Vector2( -0.314972, 117.173 )
+rotation = 2.00348
+rest = Transform2D( 1, 0, 0, 1, -0.314972, 117.173 )
+
+[node name="เท้าขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาขวา/ต้นขาขวา/ขาขวา"]
+position = Vector2( 0.420441, 161.032 )
+rotation = 0.113446
+rest = Transform2D( 0.993572, 0.113203, -0.113203, 0.993572, 0.420441, 161.032 )
+default_length = 30.0
+
+[node name="ข้อต่อขาซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="ต้นขาซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย"]
+position = Vector2( -14.3495, 11.3461 )
+rotation = -1.08998
+rest = Transform2D( 0.920503, -0.390734, 0.390734, 0.920503, -14.3495, 11.3461 )
+
+[node name="ขาซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย"]
+position = Vector2( -45.8585, 109.502 )
+rotation = 3.95584
+rest = Transform2D( -0.34202, 0.939693, -0.939693, -0.34202, -45.8585, 109.502 )
+
+[node name="เท้าซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อขาซ้าย/ต้นขาซ้าย/ขาซ้าย"]
+position = Vector2( 162.727, -3.3797 )
+rotation = -1.35438
+rest = Transform2D( 0.214735, -0.976672, 0.976672, 0.214735, 162.727, -3.3797 )
+default_length = 30.0
+
+[node name="หน้าอก" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+position = Vector2( 0, -146.272 )
+rotation = -0.0829925
+rest = Transform2D( 1, 0, 0, 1, 0, -146.272 )
+
+[node name="ต้นเเขนขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="เเขนชวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา"]
+position = Vector2( 0.471954, 84.9487 )
+rest = Transform2D( 1, 0, 0, 1, 0.471954, 84.9487 )
+
+[node name="มือขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา"]
+position = Vector2( -0.471924, 105.714 )
+rotation = 1.5708
+rest = Transform2D( -4.37114e-08, 1, -1, -4.37114e-08, -0.471924, 105.714 )
+default_length = 30.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนขวา/เเขนชวา/มือขวา"]
+position = Vector2( 28.2433, -29.242 )
+rotation = 1.55097
+scale = Vector2( 1, -1 )
+
+[node name="ต้นเเขนซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก"]
+rotation = 0.238888
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="เเขนซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย"]
+position = Vector2( 0.471954, 84.9487 )
+rotation = -2.33614
+rest = Transform2D( 1, 0, 0, 1, 0.471954, 84.9487 )
+
+[node name="มือซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/ต้นเเขนซ้าย/เเขนซ้าย"]
+position = Vector2( -0.471924, 105.714 )
+rotation = 0.244201
+rest = Transform2D( -4.37114e-08, 1, -1, -4.37114e-08, -0.471924, 105.714 )
+default_length = 30.0
+
+[node name="คอ" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="หัว" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/หน้าอก/คอ"]
+position = Vector2( 3.36359, -50.4538 )
+rotation = -1.35787
+rest = Transform2D( 0.211325, -0.977416, 0.977416, 0.211325, 3.36359, -50.4538 )
+default_length = 30.0
+
+[node name="controlSword" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+position = Vector2( -60.1041, -266.579 )
+rotation = 1.5708
+remote_path = NodePath("../../ดาบ")
+
+[node name="controlAreabody" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+remote_path = NodePath("../../../../CollisionPolygon2D")
+
+[node name="controlBody" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+position = Vector2( 6, 0 )
+remote_path = NodePath("../../../areaBody/body")
+update_scale = false
+
+[node name="controlStars" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง"]
+position = Vector2( 0, -147.157 )
+remote_path = NodePath("../../../../../ThrowingStars")
+use_global_coordinates = false
+
+[node name="dodge" type="Area2D" parent="Bot/NodeBody"]
+collision_layer = 32
+collision_mask = 2
+
+[node name="area" type="CollisionPolygon2D" parent="Bot/NodeBody/dodge"]
+polygon = PoolVector2Array( 300, -321.108, 299.37, 84.3659, -299.092, 86.8857, -300.352, -326.368 )
+
+[node name="disappear" type="Timer" parent="Bot"]
+wait_time = 10.0
+one_shot = true
+
+[node name="soundOver" type="AudioStreamPlayer2D" parent="Bot"]
+stream = ExtResource( 6 )
+
+[node name="coolDownOver" type="Timer" parent="Bot"]
+one_shot = true
+
+[node name="ThrowingStars" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -147.157 )
+collision_layer = 64
+collision_mask = 0
+script = ExtResource( 3 )
+
+[node name="area" type="CollisionPolygon2D" parent="ThrowingStars"]
+polygon = PoolVector2Array( -20.3837, 20.1006, -13.1391, -0.373074, -22.2736, -20.5318, -20.8561, -20.8468, -0.0674438, -13.7597, 20.7213, -22.8942, 21.1937, -21.4768, 14.5791, -0.215584, 21.5087, 20.1006, 20.4063, 21.833, 0.405029, 12.3836, -18.9663, 21.6755 )
+
+[node name="body" type="Polygon2D" parent="ThrowingStars"]
+position = Vector2( -236.824, -40.0925 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+polygon = PoolVector2Array( 440, 80, 430, 120, 430, 130, 470, 110, 520, 130, 520, 120, 510, 80, 520, 30, 510, 30, 480, 40, 470, 40, 430, 30, 420, 40, 440, 70 )
+uv = PoolVector2Array( 440, 80, 430, 120, 430, 130, 470, 110, 520, 130, 520, 120, 510, 80, 520, 30, 510, 30, 480, 40, 470, 40, 430, 30, 420, 40, 440, 70 )
+
+[node name="shoot" type="AudioStreamPlayer2D" parent="ThrowingStars"]
+position = Vector2( 40, 24 )
+stream = ExtResource( 4 )
+volume_db = 20.0
+max_distance = 4000.0
+
+[node name="Timer" type="Timer" parent="ThrowingStars"]
+one_shot = true
+
+[node name="stop" type="Area2D" parent="ThrowingStars"]
+collision_layer = 64
+collision_mask = 6
+
+[node name="area" type="CollisionPolygon2D" parent="ThrowingStars/stop"]
+polygon = PoolVector2Array( -20.3837, 20.1006, -13.1391, -0.373074, -22.2736, -20.5318, -20.8561, -20.8468, -0.0674438, -13.7597, 20.7213, -22.8942, 21.1937, -21.4768, 14.5791, -0.215584, 21.5087, 20.1006, 20.4063, 21.833, 0.405029, 12.3836, -18.9663, 21.6755 )
+
+[connection signal="body_entered" from="swordNinja/sword" to="Bot" method="stopActionThrowingStars"]
+[connection signal="body_entered" from="Bot/NodeBody/areaBody" to="Bot" method="abused"]
+[connection signal="body_entered" from="Bot/NodeBody/fencing" to="Bot" method="StartFencing"]
+[connection signal="body_exited" from="Bot/NodeBody/fencing" to="Bot" method="resetAction"]
+[connection signal="body_entered" from="Bot/NodeBody/dodge" to="Bot" method="startDodge"]
+[connection signal="body_entered" from="ThrowingStars/stop" to="Bot" method="stopActionThrowingStars"]
+[connection signal="body_entered" from="ThrowingStars/stop" to="ThrowingStars" method="stopAttack"]
