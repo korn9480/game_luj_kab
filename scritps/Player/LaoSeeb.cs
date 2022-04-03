@@ -1,23 +1,25 @@
 using Godot;
 using System;
 
-public class lao_seeb : KinematicBody2D
+public class LaoSeeb : KinematicBody2D
 {
     [Signal]
     public delegate void get_player_acttack(Boolean player_acttack);
     [Signal]
     public delegate void get_animation_acttack(string animation);
     public int speed;
-    public Boolean stopTime=false;
+    public string name_effect="";
     public AudioStreamPlayer2D sound;
     public Timer cloodown;
     public Vector2 walk = Vector2.Zero;
     public Boolean player_acttack=false;
-    public AudioStreamPlayer2D shoot;
+    public AudioStreamPlayer2D shoot,sword,lao_seej;
     public override void _Ready()
     {
         cloodown=GetNode<Timer>("Timer");
         shoot=GetNode<AudioStreamPlayer2D>("shoot");
+        sword = GetNode<AudioStreamPlayer2D>("../swordPlayer/soundSword");
+        lao_seej = GetNode<AudioStreamPlayer2D>("lao_seeb");
     }
     // -----------------------------------รับค่าจาก godot----------------------------------------------
     public Vector2 GetMyPosition(){
@@ -25,9 +27,6 @@ public class lao_seeb : KinematicBody2D
     }
     public Boolean GetMove(){
         return GetNode<Node2D>("../Player/Body").Scale.x==1;
-    }
-    public Boolean GetPlayerJum(){
-        return GetNode<KinematicBody2D>("../Player").IsOnWall();
     }
     public string GetStart(){
         return GetNode<AnimationPlayer>("../Player/Action").CurrentAnimation;
@@ -37,18 +36,18 @@ public class lao_seeb : KinematicBody2D
         return GetNode<Player>("../Player").over==true;
     }
     public void stopAttack(Node body){
-        if (!stopTime){
-            stopTime=true;
+        if (!cloodown.IsStopped()){
+            name_effect=body.Name;
+            if (name_effect=="ThrowingStars") lao_seej.Play();
+            else if (name_effect=="swordNinja") sword.Play();
         }
-        else if(stopTime){
-            cloodown.Stop();
-            stopTime=false;
-        }
+        
     }
     public void MyActtack(){
         if (cloodown.IsStopped()){
             SetCollisionLayerBit(1,true);
             cloodown.Start(0.7f); 
+            shoot.Play();
             if (!GetMove()){
                 player_acttack=true;
                 speed=900;
@@ -69,9 +68,10 @@ public class lao_seeb : KinematicBody2D
             followPlayer();
         }
     }
-    public void startSoud(){
-        if (cloodown.TimeLeft > 0.3f && cloodown.TimeLeft < 0.4f){
-            shoot.Play();
+    public void soundCrash(){
+        if(name_effect!=""){
+            cloodown.Stop();
+            name_effect="";
         }
     }
     public void followPlayer(){
@@ -85,16 +85,14 @@ public class lao_seeb : KinematicBody2D
         string start = GetStart();
         if (start=="lao_seeb" || !cloodown.IsStopped()){
             MyActtack();
-            startSoud();
+            soundCrash();
         }
         else if (GetPlayerOver()){
             SetCollisionLayerBit(1,false);
             Visible=false;
-            shoot.Stop();
         }
         else {
             SetCollisionLayerBit(1,false);            
-            shoot.Stop();
             followPlayer();
 
         }

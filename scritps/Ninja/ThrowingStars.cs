@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class ThrowingStars : KinematicBody2D
+public class ThrowingStars : KinematicBody2D 
 {
     [Signal]
     public delegate void get_player_acttack(Boolean player_acttack);
@@ -35,23 +35,24 @@ public class ThrowingStars : KinematicBody2D
     }
     //---------------------------------------------Method ต่างๆ------------------------------------------
     public void stopAttack(Node body){
-        stopTime=true;
+        cloodown.Stop();
+        followPlayer();
+
     }
     public void MyActtack(){
         if (cloodown.IsStopped()){
             shoot.Play();
             cloodown.Start(0.7f);
             Position=GetGlobalPosition();
+            player_acttack=true;
             if (!GetMove()){
-                player_acttack=true;
                 speed=900;
             }
             else {
-                player_acttack=true;
                 speed=-900;
             }
         }
-        else if (!(cloodown.IsStopped()) && cloodown.TimeLeft<0.6f){
+        else if (player_acttack && cloodown.TimeLeft<0.6f){
             walk.x=0;
             walk.x+=speed;
             RotationDegrees+=10;
@@ -60,30 +61,31 @@ public class ThrowingStars : KinematicBody2D
         }
         else {
             RotationDegrees=0;
-            shoot.Stop();
             followPlayer();
         }
     }
     public void followPlayer(){
-        player_acttack=false;
+        // player_acttack=false;
         Vector2 position=GetMyPosition();
         position.y-=147.157f;
         Position=position;
     }
+  
     public override void _PhysicsProcess(float delta){
         Boolean start = GetStart();
         if (start || !cloodown.IsStopped()){
             MyActtack();
-            if (stopTime){
-                cloodown.Stop();
-                stopTime=false;
+            if (IsOnWall()){
+                // player_acttack=false;
             }
         }
         else if (GetNinjaOver()){
             SetCollisionLayerBit(6,false);
             GetNode<RemoteTransform2D>("../Bot/NodeBody/Skeleton/กระดูกสันหลัง/controlStars").UseGlobalCoordinates=true;
+            player_acttack=false;
         }
         else {
+            player_acttack=false;
             followPlayer();
             shoot.Stop();
         }

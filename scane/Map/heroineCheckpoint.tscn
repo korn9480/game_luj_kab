@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scritps/Map/heroineCheckpoint.cs" type="Script" id=1]
+[ext_resource path="res://image/backgroundBru.jpg" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 625.024, 24.297 )
+extents = Vector2( 191.036, 46.5206 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 625.024, 24.2973 )
+extents = Vector2( 81.1912, 10 )
 
 [sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0 )
@@ -16,11 +17,28 @@ colors = PoolColorArray( 0.27451, 0.839216, 0.0156863, 1 )
 gradient = SubResource( 3 )
 width = 50
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 405.027, 23.208 )
+
 [node name="heroineCheckpoint" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="background" type="Node2D" parent="."]
+position = Vector2( -4, 0 )
+
+[node name="backgroundBru2" type="Sprite" parent="background"]
+position = Vector2( 642.114, -105.432 )
+scale = Vector2( 0.894769, 1 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="backgroundBru" type="Sprite" parent="background"]
+position = Vector2( -569.89, -99.2739 )
+texture = ExtResource( 2 )
+
 [node name="Floor" type="StaticBody2D" parent="."]
-scale = Vector2( 1, 2 )
+position = Vector2( 0, 300 )
+scale = Vector2( 3, 2 )
 collision_layer = 1024
 collision_mask = 161
 
@@ -31,14 +49,27 @@ collision_layer = 1024
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/joinCheckpoint"]
+position = Vector2( -271.409, -0.525085 )
 scale = Vector2( 5, 1 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+[node name="helpNkaujCoob" type="Area2D" parent="Floor"]
+position = Vector2( 323.26, -32.7298 )
+collision_layer = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/helpNkaujCoob"]
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Floor"]
-scale = Vector2( 25, 50 )
+position = Vector2( -0.44555, 0 )
+scale = Vector2( 16.182, 50 )
 texture = SubResource( 4 )
 
-[connection signal="body_exited" from="Floor/joinCheckpoint" to="." method="PlayerBack"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+light_mask = 1024
+scale = Vector2( 1, 1.07673 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Floor/joinCheckpoint" to="." method="playerJoinCheckpoint"]
+[connection signal="body_entered" from="Floor/helpNkaujCoob" to="." method="helpNkaujCoob"]
+[connection signal="body_entered" from="Floor/helpNkaujCoob" to="." method="PlayerBack"]

@@ -4,13 +4,9 @@ using System;
 public class Root : Node2D
 {
     [Signal]
-    public delegate void player_start(string start_game);
-    [Signal]
-    public delegate void PLayer_go(string grub_bot,string bot_start);
-
-    public string start_game="not start game";
+    public delegate void get_grub_bot(string move);
     public string bot_start = "not start game";
-    public string grub_bot = "player go";
+
     //--------------------------ตัวเเปรจำนวน บอท--------------------------------------------------
     public int grub_bot_back;
     public int bot_back_over;
@@ -22,45 +18,42 @@ public class Root : Node2D
 
     public override void _Ready()
     {
-        button_start = GetNode<Button>("Player/startGame");
-        button_reset = GetNode<Button>("Player/reset");
+        GD.Print("----------------------------");
+        button_start = GetNode<Button>("Player/Player/startGame");
+        button_reset = GetNode<Button>("Player/Player/reset");
         result = GetNode<Label>("Player/Player/gameOver");
         Node2D checkpoint_one = GetNode<Node2D>("checkpointOne");
-        grub_bot_back= readGrubBos();
+        readGrubBos();
         
-        GetNode<Node2D>("heroineCheckpoint").Connect("player_go_or_back",this,nameof(changGrubBosPlayer));
         GetNode<Node2D>("Player/Player").Connect("get_my_over",this,nameof(PlayerLoss));
+        GetNode<KinematicBody2D>("Player/Player").Connect("get_start_game",this,nameof(startGame));
+        GetNode<KinematicBody2D>("Player/Player").Connect("get_reset_game",this,nameof(resetGame));
+        GetNode<Node2D>("heroineCheckpoint/NkaujCoob/NkaujCoob").Connect("get_my_over",this,nameof(PlayerLoss));
     }
     public void updateBotOver(string my_start){
         if (my_start=="player back"){
-            bot_back_over++;
+            grub_bot_back--;
         }
     }
-    public int readGrubBos(){
-        var grub_bot = GetNode<Node2D>("checkpointOne").GetTree().GetNodesInGroup("GrubBosPlayerBack");
-        int number=0;
-        string name=  GetNode<Node2D>("checkpointOne").Name;
-        foreach(Node2D node in grub_bot){
-            String parent = node.GetParent().Name;
-            if (parent==name){
-                number++;
-                GetNode<Node2D>("checkpointOne/"+node.Name+"/Bot").Connect("get_ninja_over",this,nameof(updateBotOver));
+    public async void readGrubBos(){
+        var grub_bot = GetNode<Node2D>("checkpointOne").GetChildren();
+        foreach (Node item in grub_bot){
+            if (item.GetScript()!=null){
+                string grub= GetNode<NinjaType>("checkpointOne/"+item.Name).grub;                              
+                if (grub == "player back"){
+                    item.GetChild(1).Connect("get_ninja_over",this,nameof(updateBotOver));
+                    grub_bot_back++;
+                }
             }
         }
-        GD.Print("number : "+number);
-        return number;
-    }
-    public void changGrubBosPlayer(string player_move){
-        grub_bot=player_move;
     }
     // --------------------------------------------button-------------------------------------------------
-    public void startGame(){
-        start_game = "start game";
-        button_start.Visible=false;
-        button_reset.Visible=false;
+    public void startGame(Boolean reset){
+        if (result.Text==""){
+            EmitSignal(nameof(get_grub_bot),"player go");
+        }
     }
     public void resetGame(){
-        start_game = "reset game" ;       
         GetTree().ReloadCurrentScene();
     }
     public void changPostionBotton(float x,float y,Button name){
@@ -76,28 +69,18 @@ public class Root : Node2D
     }
     // -------------------------------------------Method------------------------------------------------
     public void PlayerWin(){
-        
-        if (grub_bot_back==bot_back_over){
+        if (grub_bot_back==0){
             result.Text="You win!!!";
+            
         }
         
     }
     public void PlayerLoss(Boolean over){
         bot_start="Player over";
-        start_game ="Player over";
         result.Text="You Loss!!!";
     }
      public override void _PhysicsProcess(float delta)
     {
-        string result_game= GetNode<Label>("Player/Player/gameOver").Text;
-        if (start_game=="start game" && result_game==""){
-            PlayerWin();
-        }
-        else if (result_game!=null){
-            changPostionBotton(-416.162f,-143.975f,button_start);
-            changPostionBotton(-415.271f,-53.994f,button_reset);
-            button_start.Visible=true;
-            button_reset.Visible=true;
-        }
+        PlayerWin();
     }
 }
