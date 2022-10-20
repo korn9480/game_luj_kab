@@ -1013,6 +1013,7 @@ tracks/11/keys = {
 }
 
 [sub_resource type="Animation" id=20]
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("move/Skeleton/กระดูกสันหลัง/หน้าอก/ข้อต่อมือ/ต้นเเขนซ้าย:rotation_degrees")
 tracks/0/interp = 1
@@ -1068,7 +1069,7 @@ scale = Vector2( 0.37, 0.37 )
 [node name="NkaujCoob" type="KinematicBody2D" parent="."]
 collision_mask = 1056
 script = ExtResource( 3 )
-speed = 200
+speed = 350
 jum = 400
 down = 10
 
@@ -1088,12 +1089,21 @@ visible = false
 position = Vector2( -10.5877, 351.03 )
 scale = Vector2( 1.11778, 4.61916 )
 shape = SubResource( 1 )
+disabled = true
 
 [node name="move" type="Node2D" parent="NkaujCoob"]
 
+[node name="jum" type="Area2D" parent="NkaujCoob/move"]
+monitoring = false
+monitorable = false
+collision_mask = 64
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NkaujCoob/move/jum"]
+polygon = PoolVector2Array( 19.0424, -324.092, 16.1789, 139.781, 1031.17, 148.058, 1035.46, -324.405 )
+
 [node name="Over" type="Area2D" parent="NkaujCoob/move"]
 visible = false
-collision_mask = 32
+collision_mask = 64
 
 [node name="bodyOver" type="CollisionPolygon2D" parent="NkaujCoob/move/Over"]
 position = Vector2( -10.6539, -146.858 )
@@ -1106,11 +1116,10 @@ rotation = -1.81378
 polygon = PoolVector2Array( 13.6512, 12.9554, 3.33, 12.2461, -4.29678, -19.9338, 23.2, -25.5663, 25.868, -28.4746, 26.302, -40.6985, 28.2044, -44.4456, 43.8645, -44.7824, 51.3406, -50.0685, 55.396, -46.7917, 63.7109, -52.8434, 67.7034, -42.7673, 78.1008, -38.8919, 94.4611, -32.8894, 113.813, -20.6286, 119.8, -6.81318, 121.746, 11.5175, 120.18, 30.9247, 113.875, 48.5079, 102.672, 62.2812, 87.5685, 73.4649, 72.4518, 78.1551, 51.1422, 80.3366, 36.6998, 78.3791, 18.8083, 70.699, 14.4316, 59.5542 )
 
 [node name="dodge" type="Area2D" parent="NkaujCoob/move"]
-visible = false
 collision_mask = 64
 
 [node name="areaDodge" type="CollisionPolygon2D" parent="NkaujCoob/move/dodge"]
-polygon = PoolVector2Array( 157.204, -321.976, -612.566, -321.976, -612.566, 144.065, 182.917, 142.458 )
+polygon = PoolVector2Array( 23.3375, -318.365, -612.566, -321.976, -612.566, 144.065, 39.0863, 141.213 )
 
 [node name="body" type="Node2D" parent="NkaujCoob/move"]
 
@@ -1220,7 +1229,6 @@ bones = [ NodePath("กระดูกสันหลัง"), PoolRealArray( 0,
 internal_vertex_count = 11
 
 [node name="Skeleton" type="Skeleton2D" parent="NkaujCoob/move"]
-visible = false
 
 [node name="กระดูกสันหลัง" type="Bone2D" parent="NkaujCoob/move/Skeleton"]
 rest = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -1285,7 +1293,7 @@ rest = Transform2D( 0.999922, 0.0125287, -0.0125287, 0.999922, 18.354, -0.648417
 
 [node name="ผม" type="Bone2D" parent="NkaujCoob/move/Skeleton/กระดูกสันหลัง/หน้าอก/คอ"]
 position = Vector2( 4.83766, 42.1315 )
-rotation = 1.93485
+rotation = 3.04056
 rest = Transform2D( -0.9949, 0.100871, -0.100871, -0.9949, 4.83766, 42.1315 )
 default_length = 100.0
 
@@ -1329,7 +1337,7 @@ default_length = 50.0
 
 [node name="se" type="Bone2D" parent="NkaujCoob/move/Skeleton/กระดูกสันหลัง"]
 position = Vector2( -34.4326, 10.5946 )
-rotation = 0.474431
+rotation = 0.288222
 rest = Transform2D( 1, 0, 0, 1, -34.4326, 10.5946 )
 
 [node name="se2" type="Bone2D" parent="NkaujCoob/move/Skeleton/กระดูกสันหลัง/se"]
@@ -1339,17 +1347,16 @@ rest = Transform2D( -0.106253, 0.994339, -0.994339, -0.106253, -33.9028, 88.9949
 default_length = 100.0
 
 [node name="กระโปรงขวา" type="Bone2D" parent="NkaujCoob/move/Skeleton/กระดูกสันหลัง"]
-rotation = 0.0892518
+rotation = 0.869982
 rest = Transform2D( 0.289858, 0.95707, -0.95707, 0.289858, 0, 0 )
 default_length = 100.0
 
 [node name="กระโปรงซ้าย" type="Bone2D" parent="NkaujCoob/move/Skeleton/กระดูกสันหลัง"]
-rotation = 2.68233
+rotation = 1.9543
 rest = Transform2D( -0.297035, 0.954867, -0.954867, -0.297035, 0, 0 )
 default_length = 100.0
 
 [node name="scanJumBody" type="RayCast2D" parent="NkaujCoob/move"]
-visible = false
 position = Vector2( 0, -2.7027 )
 rotation = 1.5708
 scale = Vector2( 90, 2 )
@@ -1358,12 +1365,11 @@ cast_to = Vector2( 0, 550 )
 collision_mask = 32
 
 [node name="scanJumFoot" type="RayCast2D" parent="NkaujCoob/move"]
-visible = false
-position = Vector2( -32.7235, 340.046 )
+position = Vector2( -32.723, 0 )
 rotation = 1.5708
 scale = Vector2( 49.877, 2.32089 )
 enabled = true
-cast_to = Vector2( 0, 100 )
+cast_to = Vector2( 0, 300 )
 collision_mask = 32
 
 [node name="move" type="RayCast2D" parent="NkaujCoob/move"]
@@ -1402,19 +1408,17 @@ anims/stand = SubResource( 19 )
 anims/walk = SubResource( 20 )
 
 [node name="scanBotLeft" type="RayCast2D" parent="NkaujCoob"]
-visible = false
-position = Vector2( 0, -95 )
+position = Vector2( 0, -23.708 )
 rotation = 1.5708
-scale = Vector2( 90, 1 )
+scale = Vector2( 250, 1 )
 enabled = true
 cast_to = Vector2( 0, 1400 )
 collision_mask = 32
 
 [node name="scanBotRight" type="RayCast2D" parent="NkaujCoob"]
-visible = false
-position = Vector2( 0, -95 )
+position = Vector2( 0, -23.709 )
 rotation = -1.5708
-scale = Vector2( 90, 1 )
+scale = Vector2( 250, 1 )
 enabled = true
 cast_to = Vector2( 0, 1400 )
 collision_mask = 32
@@ -1443,6 +1447,7 @@ one_shot = true
 stream = ExtResource( 4 )
 volume_db = 20.0
 
+[connection signal="body_entered" from="NkaujCoob/move/jum" to="NkaujCoob" method="jumDodge"]
 [connection signal="body_entered" from="NkaujCoob/move/Over" to="NkaujCoob" method="Over"]
 [connection signal="body_entered" from="NkaujCoob/move/dodge" to="NkaujCoob" method="Dodge"]
 [connection signal="body_exited" from="NkaujCoob/move/dodge" to="NkaujCoob" method="resetAction"]

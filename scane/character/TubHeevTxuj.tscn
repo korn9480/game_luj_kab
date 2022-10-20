@@ -1,11 +1,12 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://effect/newShot.mp3" type="AudioStream" id=1]
-[ext_resource path="res://scritps/Ninja/ThrowingStars.cs" type="Script" id=2]
+[ext_resource path="res://scritps/Ninja/Ninja.cs" type="Script" id=2]
 [ext_resource path="res://image/โจร.png" type="Texture" id=3]
-[ext_resource path="res://scritps/Ninja/Ninja.cs" type="Script" id=4]
-[ext_resource path="res://scritps/Ninja/NinjaType.cs" type="Script" id=5]
+[ext_resource path="res://scritps/Ninja/NinjaType.cs" type="Script" id=4]
+[ext_resource path="res://scritps/Ninja/ThrowingStars.cs" type="Script" id=5]
 [ext_resource path="res://effect/โดน เสียงพ่อ.mp3" type="AudioStream" id=6]
+[ext_resource path="res://effect/bos.mp3" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6403, 129.048 )
@@ -86,6 +87,18 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา/มือขวา/sword:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 78.7, 127.776 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -374,6 +387,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, -1 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("../swordNinja/area:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=8]
 tracks/0/type = "value"
@@ -555,6 +580,18 @@ tracks/14/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../swordNinja/area:disabled")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -819,12 +856,13 @@ width = 10
 
 [node name="Bos" type="Node2D"]
 scale = Vector2( 0.425, 0.425 )
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="Bot" type="KinematicBody2D" parent="."]
 collision_layer = 32
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 speed = 200
+float_speed = 300
 jum = 500
 down = 10
 
@@ -936,24 +974,22 @@ rest = Transform2D( -4.37114e-08, 1, -1, -4.37114e-08, -61.3801, 49.4262 )
 default_length = 30.0
 
 [node name="เเขนขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน"]
-rotation = -0.551189
 rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="ข้อศอกขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา"]
 position = Vector2( -98.2643, 28.2266 )
-rotation = 2.11358
+rotation = 1.96772
 rest = Transform2D( -0.346574, 0.938023, -0.938023, -0.346574, -98.2643, 28.2266 )
 
 [node name="มือขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา"]
 position = Vector2( 101.435, 9.75684 )
-rotation = 0.0229455
+rotation = 0.434927
 rest = Transform2D( 0.999737, 0.0229435, -0.0229435, 0.999737, 101.435, 9.75684 )
 default_length = 30.0
 
 [node name="sword" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา/มือขวา"]
 position = Vector2( 37.9067, -1.04015 )
 rotation = -0.984734
-scale = Vector2( 1, -1 )
 remote_path = NodePath("../../../../../../ดาบ")
 
 [node name="คอ" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน"]
@@ -1002,18 +1038,19 @@ rest = Transform2D( 1, 0, 0, 1, 30.9543, 9.52438 )
 
 [node name="ขาขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา/ต้นขาขวา"]
 position = Vector2( 27.7795, 134.929 )
-rotation = 0.0257352
+rotation = 0.250062
 rest = Transform2D( 1, 0, 0, 1, 27.7795, 134.929 )
 
 [node name="เท้าขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา/ต้นขาขวา/ขาขวา"]
 position = Vector2( -25.3984, 167.471 )
+rotation = -0.0195571
 rest = Transform2D( 0.996258, 0.0864338, -0.0864338, 0.996258, -25.3984, 167.471 )
 default_length = 50.0
 
 [node name="ดาบ" type="Bone2D" parent="Bot/NodeBody/Skeleton"]
-position = Vector2( 200.541, -83.0769 )
-rotation = -0.951428
-scale = Vector2( 1, -1 )
+position = Vector2( 128.108, 12.0312 )
+rotation = -0.134117
+scale = Vector2( 1, 1 )
 rest = Transform2D( -0.372217, 0.928146, -0.928146, -0.372217, 137.31, -0.793671 )
 default_length = 50.0
 
@@ -1090,15 +1127,20 @@ one_shot = true
 [node name="soundOver" type="AudioStreamPlayer2D" parent="Bot"]
 stream = ExtResource( 6 )
 
+[node name="soundOpen" type="AudioStreamPlayer2D" parent="Bot"]
+stream = ExtResource( 7 )
+volume_db = 20.618
+
 [node name="swordNinja" type="KinematicBody2D" parent="."]
-position = Vector2( 200.541, -83.0769 )
-rotation = -0.951428
-scale = Vector2( 1, -1 )
+position = Vector2( 128.108, 12.0312 )
+rotation = -0.134117
+scale = Vector2( 1, 1 )
 collision_layer = 64
 collision_mask = 0
 
 [node name="area" type="CollisionPolygon2D" parent="swordNinja"]
 polygon = PoolVector2Array( 105.318, 10.5023, 147.949, 12.6756, 213.097, 16.6617, 283.349, 19.7997, 283.55, 17.2979, 277.621, 6.49662, 260.055, -6.7524, 106.164, -10.9586 )
+disabled = true
 
 [node name="areaSword" type="Area2D" parent="swordNinja"]
 
@@ -1108,7 +1150,7 @@ polygon = PoolVector2Array( 105.318, 10.5023, 147.949, 12.6756, 213.097, 16.6617
 [node name="ThrowingStars" type="KinematicBody2D" parent="."]
 collision_layer = 64
 collision_mask = 0
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="shoot" type="AudioStreamPlayer2D" parent="ThrowingStars"]
 position = Vector2( 40, 24 )
@@ -1139,4 +1181,5 @@ texture = SubResource( 14 )
 [connection signal="body_entered" from="Bot/NodeBody/areaBody" to="Bot" method="Over"]
 [connection signal="body_entered" from="Bot/NodeBody/fencingLaoSeej" to="Bot" method="StartFencing"]
 [connection signal="body_exited" from="Bot/NodeBody/fencingLaoSeej" to="Bot" method="resetAction"]
+[connection signal="body_entered" from="swordNinja/areaSword" to="Bot" method="stopActionThrowingStars"]
 [connection signal="body_entered" from="ThrowingStars/stop" to="ThrowingStars" method="stopAttack"]

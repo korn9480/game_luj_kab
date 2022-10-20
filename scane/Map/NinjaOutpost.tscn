@@ -21,10 +21,10 @@ extents = Vector2( 625.024, 24.2973 )
 script = ExtResource( 2 )
 
 [node name="BackgroundBluer" type="Node2D" parent="."]
-position = Vector2( -6, 0 )
+position = Vector2( -5.30542, 0 )
 
 [node name="backgroundBru" type="Sprite" parent="BackgroundBluer"]
-position = Vector2( -1229.79, -83.8055 )
+position = Vector2( -1229.7, -83.8133 )
 texture = ExtResource( 1 )
 
 [node name="backgroundBru2" type="Sprite" parent="BackgroundBluer"]

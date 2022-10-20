@@ -18,7 +18,6 @@ public class Root : Node2D
 
     public override void _Ready()
     {
-        GD.Print("----------------------------");
         button_start = GetNode<Button>("Player/Player/startGame");
         button_reset = GetNode<Button>("Player/Player/reset");
         result = GetNode<Label>("Player/Player/gameOver");

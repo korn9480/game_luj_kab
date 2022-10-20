@@ -248,7 +248,7 @@ public class Ninja : KinematicBody2D
         // string my_moving= getStartGame();
         string grub = getGrubBot();
         if (!ninja_over){
-            if ((my_moving=="start game") && (grub==my_start)){
+            if ((my_moving=="start game")){
                 Vector2 player=GetPositionPlayer();
                 Move(player);
                 Jum(player);

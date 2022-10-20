@@ -1469,6 +1469,7 @@ tracks/7/keys = {
 
 [node name="Ninja" type="Node2D"]
 scale = Vector2( 0.425, 0.425 )
+z_as_relative = false
 script = ExtResource( 5 )
 
 [node name="swordNinja" type="KinematicBody2D" parent="."]
@@ -1802,7 +1803,7 @@ collision_mask = 2
 polygon = PoolVector2Array( 300, -321.108, 299.37, 84.3659, -299.092, 86.8857, -300.352, -326.368 )
 
 [node name="disappear" type="Timer" parent="Bot"]
-wait_time = 10.0
+wait_time = 3.0
 one_shot = true
 
 [node name="soundOver" type="AudioStreamPlayer2D" parent="Bot"]
@@ -1828,7 +1829,7 @@ uv = PoolVector2Array( 440, 80, 430, 120, 430, 130, 470, 110, 520, 130, 520, 120
 [node name="shoot" type="AudioStreamPlayer2D" parent="ThrowingStars"]
 position = Vector2( 40, 24 )
 stream = ExtResource( 4 )
-volume_db = 15.0
+volume_db = 5.0
 max_distance = 4000.0
 
 [node name="Timer" type="Timer" parent="ThrowingStars"]

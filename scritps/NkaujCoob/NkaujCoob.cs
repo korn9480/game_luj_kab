@@ -47,15 +47,17 @@ public class NkaujCoob : KinematicBody2D
     } 
     // ------------------------------ กันชน ------------------------------------------------
     public void Over(Node body){
-        action.Play("over");
-        foot.Play("over");
-        cloth.Play("over");
-        hair.Play("over");
-        over=true;
-        SetCollisionLayerBit(0,false);
-        SetCollisionLayerBit(7,true);
-        SetCollisionMaskBit(5,false);
-        EmitSignal(nameof(get_my_over),over);
+        if (getStartGame()=="start game"){
+            action.Play("over");
+            foot.Play("over");
+            cloth.Play("over");
+            hair.Play("over");
+            over=true;
+            SetCollisionLayerBit(0,false);
+            SetCollisionLayerBit(7,true);
+            SetCollisionMaskBit(5,false);
+            EmitSignal(nameof(get_my_over),over);
+        }
     }
     public void Dodge(Node body){
         if (!over){
@@ -64,15 +66,24 @@ public class NkaujCoob : KinematicBody2D
                 if (direction.x>0) Walk.x-=speed+100;
                 else if (direction.x<0) Walk.x+=speed;
             }
-            else {
-                action.Play("dodge");
-            }
+            GD.Print("dodge ");
+            action.Play("dodge");
+            
         }
     }
     public void resetAction(Node body){
         if (!over){
             action.PlayBackwards("dodge");
             // action.Play("stand");
+        }
+    }
+    public void jumDodge(Node body){
+        if (getStartGame()=="start game"){
+            GD.Print("jum");
+            Vector2 n = my_img.GetScale();
+            n.x = n.x *-1;
+            my_img.SetScale(n);
+            action.Play("dodge");
         }
     }
     // ------------------------------ method move-------------------------------------------
@@ -152,6 +163,7 @@ public class NkaujCoob : KinematicBody2D
             if (left_attack.IsColliding() || right_attack.IsColliding()){
                 // action.Play("stand");
                 action.Play("Knife");
+                Jum();
             }
             else {
                 // action.Play("stand");
@@ -163,8 +175,8 @@ public class NkaujCoob : KinematicBody2D
     {
         if (getStartGame()=="start game" && !over){
             Move();
-            Jum();
             showAction();
+            Jum();
             position=GetGlobalPosition();
         }
         else if (over){

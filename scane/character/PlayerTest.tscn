@@ -1,14 +1,15 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://image/ชิ้นส่วน.png" type="Texture" id=1]
-[ext_resource path="res://scritps/Player/Player.cs" type="Script" id=2]
+[ext_resource path="res://scritps/Player/LaoSeeb.cs" type="Script" id=2]
 [ext_resource path="res://effect/Sword.mp3" type="AudioStream" id=3]
 [ext_resource path="res://effect/newShot.mp3" type="AudioStream" id=4]
 [ext_resource path="res://fonts/Prompt/Prompt-ExtraBoldItalic.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://effect/โดน เสียงพ่อ.mp3" type="AudioStream" id=6]
 [ext_resource path="res://effect/lau_seej.mp3" type="AudioStream" id=7]
-[ext_resource path="res://scritps/Player/LaoSeeb.cs" type="Script" id=8]
+[ext_resource path="res://scritps/Player/Player.cs" type="Script" id=8]
 [ext_resource path="res://fonts/Prompt/Prompt-Black.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://effect/soadPlayerGame.mp3" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 6 )
@@ -1380,7 +1381,7 @@ position = Vector2( -64.59, -0.222714 )
 rotation = -1.5708
 collision_layer = 2
 collision_mask = 0
-script = ExtResource( 8 )
+script = ExtResource( 2 )
 
 [node name="lao_seeb" type="AudioStreamPlayer2D" parent="lao_seeb"]
 position = Vector2( -0.222948, 64.59 )
@@ -1413,8 +1414,8 @@ collision_mask = 64
 shape = SubResource( 1 )
 
 [node name="swordPlayer" type="KinematicBody2D" parent="."]
-position = Vector2( 61.8142, 35.7656 )
-rotation = -1.20847
+position = Vector2( -1.81772, -1.81688 )
+rotation = 0.000788756
 scale = Vector2( 0.4, 0.4 )
 collision_layer = 4
 collision_mask = 0
@@ -1428,6 +1429,7 @@ stream = ExtResource( 3 )
 position = Vector2( 4.54789, 4.53861 )
 rotation = -0.000788756
 polygon = PoolVector2Array( -7.29626, 0.758877, 0.640755, -12.1388, 53.2234, 19.6093, 198.57, 96.003, 207.499, 101.46, 202.042, 104.932, 190.137, 104.932, 164.342, 104.436, 10.0659, 11.6723 )
+disabled = true
 
 [node name="stop" type="Area2D" parent="swordPlayer"]
 collision_layer = 4
@@ -1441,41 +1443,36 @@ polygon = PoolVector2Array( -7.29626, 0.758877, 0.640755, -12.1388, 53.2234, 19.
 [node name="Player" type="KinematicBody2D" parent="."]
 scale = Vector2( 0.4, 0.4 )
 collision_mask = 1024
-script = ExtResource( 2 )
+script = ExtResource( 8 )
 speed = 200
 poverspeed = 400
 jum = 500
 down = 10
 
 [node name="head" type="CollisionPolygon2D" parent="Player"]
-position = Vector2( -1.86708, -133.053 )
-rotation = 1.899
+position = Vector2( -0.971299, 1.11099 )
 scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -19.4926, -218.651, -35.101, -220.137, -45.1349, -237.232, -52.5674, -237.975, -48.8512, -248.752, -48.8512, -255.07, -52.1958, -262.131, -53.3107, -284.429, -56.6553, -294.834, -49.5944, -303.01, -36.2158, -311.929, -19.121, -316.76, -0.539627, -316.76, 18.785, -336.828, 29.5622, -337.943, 39.2245, -336.085, 47.0287, -325.679, 48.8868, -315.645, 48.8868, -309.328, 48.8868, -303.01, 47.0287, -294.834, 41.8259, -284.057, 37.3663, -278.854, 33.2784, -283.685, 31.0487, -272.908, 35.5082, -256.557, 39.9677, -241.692, 32.9068, -233.887, 31.4203, -224.968, 24.3594, -224.597, 26.5891, -215.306, 22.1296, -209.36, 10.6092, -208.617, 1.69014, -203.786, -6.48567, -200.069, -20.2359, -195.238, -25.067, -191.522, -29.5266, -196.353, -28.4117, -199.698, -22.4656, -203.414 )
 one_way_collision_margin = 5.0
 
 [node name="area" type="CollisionPolygon2D" parent="Player"]
-rotation = 1.02992
 scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -18.1947, -203.256, -25.3716, -200.978, -24.7038, -192.237, -32.1781, -169.325, -40.4231, -148.011, -40.7091, -128.171, -41.018, -106.743, -44.1495, 0.372471, -52.406, 22.4794, -56.8202, 53.3733, -56.4612, 83.5422, -55.9928, 106.112, 78.9223, 108.056, 50.5308, 40.1754, 43.7543, 14.6767, 55.8187, 3.73763, 55.231, -10.5589, 61.9345, -35.0696, 67.753, -53.2427, 72.8311, -130.198, 63.3491, -188.281, 55.1569, -225.707 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 1.0511, 299.569 )
 shape = SubResource( 4 )
-disabled = true
 
 [node name="Over" type="Area2D" parent="Player"]
 collision_layer = 0
 collision_mask = 64
 
 [node name="body" type="CollisionPolygon2D" parent="Player/Over"]
-rotation = 1.02992
 scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -17.4142, -195.269, -24.7038, -192.237, -32.1781, -169.325, -40.4231, -148.011, -40.7091, -128.171, -41.018, -106.743, -44.1495, 0.372471, -52.406, 22.4794, -56.8202, 53.3733, -56.4612, 83.5422, -55.9928, 106.112, 78.9223, 108.056, 50.5308, 40.1754, 43.7543, 14.6767, 55.8187, 3.73763, 55.231, -10.5589, 61.9345, -35.0696, 67.753, -53.2427, 72.8311, -130.198, 63.3491, -188.281, 46.9054, -214.667, 37.6211, -227.331, 27.265, -223.582, 28.4803, -211.313 )
 
 [node name="head" type="CollisionPolygon2D" parent="Player/Over"]
-position = Vector2( 0.471983, -131.86 )
-rotation = 1.899
+position = Vector2( -0.595299, -1.48801 )
 scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -19.4926, -218.651, -35.101, -220.137, -45.1349, -237.232, -52.5674, -237.975, -48.8512, -248.752, -48.8512, -255.07, -52.1958, -262.131, -53.3107, -284.429, -56.6553, -294.834, -49.5944, -303.01, -36.2158, -311.929, -19.121, -316.76, -0.539627, -316.76, 18.785, -336.828, 29.5622, -337.943, 39.2245, -336.085, 47.0287, -325.679, 48.8868, -315.645, 48.8868, -309.328, 48.8868, -303.01, 47.0287, -294.834, 41.8259, -284.057, 37.3663, -278.854, 33.2784, -283.685, 31.0487, -272.908, 35.5082, -256.557, 39.9677, -241.692, 32.9068, -233.887, 31.4203, -224.968, 24.3594, -224.597, 26.5891, -215.306, 22.1296, -209.36, 10.6092, -208.617, 1.69014, -203.786, -6.48567, -200.069, -20.2359, -195.238, -25.067, -191.522, -29.5266, -196.353, -28.4117, -199.698, -22.4656, -203.414 )
 
@@ -1548,6 +1545,7 @@ uv = PoolVector2Array( 11.3821, 565.854, 13.8211, 547.968, 32.5203, 543.902, 121
 bones = [ NodePath("ส่วนขา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/เเขนขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/เเขนขวา/ข้อหมุน"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/เเขนขวา/ข้อหมุน/ดาบ"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("ส่วนขา/กระดูกสันหลัง/เเขนซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/เเขนซ้าย/hend"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/คอ"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/คอ/หัว"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/กระดูกสันหลัง/คอ/รินบิ้น"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/left_leg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/left_leg/ขาซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/left_leg/ขาซ้าย/หัวเข่าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/left_leg/ขาซ้าย/หัวเข่าซ้าย/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/right_leg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/right_leg/ขาขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/right_leg/ขาขวา/หัวเข่าขวา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/right_leg/ขาขวา/หัวเข่าขวา/เท้าซ้าย"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/cloth_pink"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/cloth_pink/ผ้าชมพู"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("ส่วนขา/ขา/ผ้าน้ำตาล"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
 [node name="hend_two" type="Polygon2D" parent="Player/Body/sword"]
+visible = false
 position = Vector2( -448.488, 718.607 )
 rotation = -0.540839
 texture = ExtResource( 1 )
@@ -1653,7 +1651,7 @@ bones = [ NodePath("ส่วนขา"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), 
 [node name="skeleton" type="Skeleton2D" parent="Player"]
 
 [node name="ขา" type="Bone2D" parent="Player/skeleton"]
-position = Vector2( 3.56763, 55.8927 )
+position = Vector2( 4.17137, 53.3936 )
 rotation = -1.48353
 rest = Transform2D( 0.0871558, -0.996195, 0.996195, 0.0871558, 3.56763, 55.8927 )
 default_length = 200.0
@@ -1720,16 +1718,14 @@ rest = Transform2D( -0.896486, 0.443071, -0.443071, -0.896486, -16.7716, -56.328
 default_length = 50.0
 
 [node name="ส่วนขา" type="Bone2D" parent="Player/skeleton"]
-rotation = 1.02992
 rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="กระดูกสันหลัง" type="Bone2D" parent="Player/skeleton/ส่วนขา"]
 position = Vector2( 15.2787, -155.764 )
-rotation = 0.86908
 rest = Transform2D( 1, 0, 0, 1, 15.2787, -155.764 )
 
 [node name="เเขนขวา" type="Bone2D" parent="Player/skeleton/ส่วนขา/กระดูกสันหลัง"]
-rotation = -0.149549
+rotation = 1.77044
 rest = Transform2D( -1, 1.50996e-07, -1.50996e-07, -1, 0, 0 )
 default_length = 150.0
 
@@ -1738,8 +1734,8 @@ position = Vector2( 172.435, 2.37842 )
 rest = Transform2D( 1, 0, 0, 1, 172.435, 2.37842 )
 
 [node name="ดาบ" type="Bone2D" parent="Player/skeleton/ส่วนขา/กระดูกสันหลัง/เเขนขวา/ข้อหมุน"]
-position = Vector2( 72.8699, 58.2368 )
-rotation = -2.29684
+position = Vector2( -79.3754, 111.741 )
+rotation = -1.10857
 rest = Transform2D( -0.778243, -0.627963, 0.627963, -0.778243, -45.1898, -70.1632 )
 default_length = 170.0
 
@@ -1749,7 +1745,7 @@ rotation = -0.661082
 remote_path = NodePath("../../../../../../../../swordPlayer")
 
 [node name="เเขนซ้าย" type="Bone2D" parent="Player/skeleton/ส่วนขา/กระดูกสันหลัง"]
-rotation = -0.399728
+rotation = 0.674311
 rest = Transform2D( -0.34202, 0.939693, -0.939693, -0.34202, 0, 0 )
 default_length = 80.0
 
@@ -1855,6 +1851,10 @@ text = "reset"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="soudGame" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource( 10 )
+volume_db = -15.0
 
 [connection signal="body_exited" from="lao_seeb/stop" to="lao_seeb" method="stopAttack"]
 [connection signal="body_entered" from="swordPlayer/stop" to="Player" method="stopActionSword"]

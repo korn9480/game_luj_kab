@@ -19,7 +19,7 @@ public class Knife : KinematicBody2D
         return GetNode<Node2D>("../NkaujCoob/move").Scale.x==1;
     }
     public Vector2 GetMyPosition(){
-        return GetNode<NkaujCoob>("../NkaujCoob").position;
+        return GetNode<KinematicBody2D>("../NkaujCoob").Position;
     }
     public bool getStart(){
         return GetNode<AnimationPlayer>("../NkaujCoob/action").CurrentAnimation=="Knife";
@@ -27,11 +27,12 @@ public class Knife : KinematicBody2D
     // ------------------------------------- method --------------------------------------------
     public void MyActtack(){
         if (cloodown.IsStopped()){
+            GD.Print("go");
             shoot.Play();
             cloodown.Start(0.7f);
-            // player_acttack=true;
+            player_acttack=true;
             
-            // followPlayer();
+            followPlayer();
             if (!GetMove()){
                 speed=900;
             }
@@ -43,7 +44,6 @@ public class Knife : KinematicBody2D
          
             walk.x=0;
             walk.x+=speed;
-            // Visible=true;
             MoveAndSlide(walk);
 
         }
@@ -54,13 +54,13 @@ public class Knife : KinematicBody2D
     }
     public void followPlayer(){
         Vector2 position=GetMyPosition();
+        // Visible=true;
         position.y-=100;
         Position=position;
 
     }
     public override void _PhysicsProcess(float delta){
         if(getStart() || !cloodown.IsStopped()){
-            
             MyActtack();
         }
         else {
