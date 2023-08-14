@@ -66,7 +66,7 @@ public class NkaujCoob : KinematicBody2D
                 if (direction.x>0) Walk.x-=speed+100;
                 else if (direction.x<0) Walk.x+=speed;
             }
-            GD.Print("dodge ");
+            // GD.Print("dodge ");
             action.Play("dodge");
             
         }

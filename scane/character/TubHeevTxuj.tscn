@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://effect/newShot.mp3" type="AudioStream" id=1]
 [ext_resource path="res://scritps/Ninja/Ninja.cs" type="Script" id=2]
@@ -12,9 +12,12 @@
 extents = Vector2( 10.6403, 129.048 )
 
 [sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 318.047, 223.802 )
+
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 81.0325, 10 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/ส่วนขา/ต้่นขาซ้าย:rotation_degrees")
@@ -101,7 +104,7 @@ tracks/6/keys = {
 "values": [ 78.7, 127.776 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/ส่วนขา/ต้่นขาซ้าย:rotation_degrees")
 tracks/0/interp = 1
@@ -175,7 +178,7 @@ tracks/5/keys = {
 "values": [ -1.12054 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/ส่วนขา/ต้่นขาซ้าย:rotation_degrees")
@@ -250,7 +253,7 @@ tracks/5/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
@@ -325,7 +328,7 @@ tracks/5/keys = {
 "values": [ -56.4211, 83.2336 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา:rotation_degrees")
@@ -400,7 +403,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
 tracks/0/interp = 1
@@ -594,7 +597,7 @@ tracks/15/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/ส่วนขา/ต้่นขาซ้าย:rotation_degrees")
@@ -705,7 +708,7 @@ tracks/8/keys = {
 "values": [ 0.0, 40.0, 95.0 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง:rotation_degrees")
@@ -804,7 +807,7 @@ tracks/7/keys = {
 "values": [ 56.8722 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนซ้าย:rotation_degrees")
@@ -843,15 +846,102 @@ tracks/2/keys = {
 "values": [ 90.0002, 146.969 ]
 }
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="Animation" id=13]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -44.5032, -148.93 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 112.742, 112.742, 160.936 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา/มือขวา:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.31468, 42.2906, 132.752 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา/มือขวา/sword:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 69.4701, 24.6302 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนซ้าย:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -29.403, -24.8533 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนซ้าย/ข้อศอกซ้าย/มือซ้าย:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 121.285, 103.914 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนซ้าย/ข้อศอกซ้าย:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -24.5966 ]
+}
+
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 15, 15 )
 
-[sub_resource type="Gradient" id=13]
+[sub_resource type="Gradient" id=15]
 offsets = PoolRealArray( 0 )
 colors = PoolColorArray( 0, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=14]
-gradient = SubResource( 13 )
+[sub_resource type="GradientTexture" id=16]
+gradient = SubResource( 15 )
 width = 10
 
 [node name="Bos" type="Node2D"]
@@ -880,8 +970,9 @@ collision_layer = 32
 collision_mask = 2
 
 [node name="area" type="CollisionPolygon2D" parent="Bot/NodeBody/dodge"]
-position = Vector2( 0, -1.47059 )
-polygon = PoolVector2Array( 349.728, -326.346, 355.598, -26.4698, -305.564, -21.691, -300.352, -326.368 )
+position = Vector2( 91.6612, -4.99602 )
+polygon = PoolVector2Array( 349.728, -326.346, 355.598, -26.4698, -101.977, -22.8523, -96.3803, -325.051 )
+disabled = true
 
 [node name="img" type="Node2D" parent="Bot/NodeBody"]
 
@@ -961,35 +1052,38 @@ rest = Transform2D( 0.018763, -0.999824, 0.999824, 0.018763, -12.9083, -164.441 
 
 [node name="เเขนซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน"]
 position = Vector2( 12.2321, -36.1546 )
+rotation = -0.433772
 rest = Transform2D( 1, 0, 0, 1, 12.2321, -36.1546 )
 
 [node name="ข้อศอกซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนซ้าย"]
 position = Vector2( -105.353, -20.4761 )
+rotation = -0.429292
 rest = Transform2D( 1, 0, 0, 1, -105.353, -20.4761 )
 
 [node name="มือซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนซ้าย/ข้อศอกซ้าย"]
 position = Vector2( -61.3801, 49.4262 )
-rotation = 1.5708
+rotation = 1.81364
 rest = Transform2D( -4.37114e-08, 1, -1, -4.37114e-08, -61.3801, 49.4262 )
 default_length = 30.0
 
 [node name="เเขนขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน"]
+rotation = -2.59932
 rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="ข้อศอกขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา"]
 position = Vector2( -98.2643, 28.2266 )
-rotation = 1.96772
+rotation = 2.80886
 rest = Transform2D( -0.346574, 0.938023, -0.938023, -0.346574, -98.2643, 28.2266 )
 
 [node name="มือขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา"]
 position = Vector2( 101.435, 9.75684 )
-rotation = 0.434927
+rotation = 2.31696
 rest = Transform2D( 0.999737, 0.0229435, -0.0229435, 0.999737, 101.435, 9.75684 )
 default_length = 30.0
 
 [node name="sword" type="RemoteTransform2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน/เเขนขวา/ข้อศอกขวา/มือขวา"]
 position = Vector2( 37.9067, -1.04015 )
-rotation = -0.984734
+rotation = 0.429878
 remote_path = NodePath("../../../../../../ดาบ")
 
 [node name="คอ" type="Bone2D" parent="Bot/NodeBody/Skeleton/กระดูกสันหลัง/ข้อต่อส่วนบน"]
@@ -1019,11 +1113,12 @@ rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="ต้่นขาซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา"]
 position = Vector2( -35.2778, 6.29961 )
-rotation = 2.52851
+rotation = 1.9684
 rest = Transform2D( -0.81788, 0.575389, -0.575389, -0.81788, -35.2778, 6.29961 )
 
 [node name="ขาซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา/ต้่นขาซ้าย"]
 position = Vector2( 69.9157, -125.657 )
+rotation = 1.93712
 rest = Transform2D( 1, 0, 0, 1, 69.9157, -125.657 )
 
 [node name="เท้าซ้าย" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา/ต้่นขาซ้าย/ขาซ้าย"]
@@ -1034,22 +1129,22 @@ default_length = 50.0
 
 [node name="ต้นขาขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา"]
 position = Vector2( 30.9543, 9.52438 )
+rotation = -0.444705
 rest = Transform2D( 1, 0, 0, 1, 30.9543, 9.52438 )
 
 [node name="ขาขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา/ต้นขาขวา"]
 position = Vector2( 27.7795, 134.929 )
-rotation = 0.250062
+rotation = 1.73165
 rest = Transform2D( 1, 0, 0, 1, 27.7795, 134.929 )
 
 [node name="เท้าขวา" type="Bone2D" parent="Bot/NodeBody/Skeleton/ส่วนขา/ต้นขาขวา/ขาขวา"]
 position = Vector2( -25.3984, 167.471 )
-rotation = -0.0195571
 rest = Transform2D( 0.996258, 0.0864338, -0.0864338, 0.996258, -25.3984, 167.471 )
 default_length = 50.0
 
 [node name="ดาบ" type="Bone2D" parent="Bot/NodeBody/Skeleton"]
-position = Vector2( 128.108, 12.0312 )
-rotation = -0.134117
+position = Vector2( 70.0858, -328.475 )
+rotation = 1.40435
 scale = Vector2( 1, 1 )
 rest = Transform2D( -0.372217, 0.928146, -0.928146, -0.372217, 137.31, -0.793671 )
 default_length = 50.0
@@ -1094,13 +1189,21 @@ collision_mask = 2
 scale = Vector2( 16.173, 0.44547 )
 shape = SubResource( 1 )
 
+[node name="turn_aroud" type="Area2D" parent="Bot/NodeBody"]
+collision_layer = 32
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bot/NodeBody/turn_aroud"]
+position = Vector2( -344.88, -138.678 )
+shape = SubResource( 2 )
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bot"]
 scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -45.8255, -223.813, -59.1739, -197.784, -65.1806, -187.105, -67.8503, -159.074, -55.8368, -30.2616, -64.5132, -4.23221, -45.8255, 5.11166, 58.292, -0.227692, 68.9708, -2.89737, 56.2898, -28.2593, 52.2852, -58.9607, 22.9188, -173.089, -7.11511, -203.123 )
 
 [node name="foot" type="CollisionShape2D" parent="Bot"]
 position = Vector2( 21.5052, 315.297 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="head" type="CollisionPolygon2D" parent="Bot"]
 position = Vector2( -26.4083, -203.941 )
@@ -1108,17 +1211,18 @@ rotation = -1.18254
 polygon = PoolVector2Array( 10.2774, -26.6557, 8.5728, -30.8233, 15.8831, -39.5366, 29.556, -45.9875, 72.2223, -43.1211, 111.601, -32.9004, 121.617, -16.1073, 116.546, 2.27831, 109.993, 13.5435, 93.1111, 24.7411, 59.5252, 38.4782, 45.9858, 49.4532, 40.3362, 50.3331, 33.5505, 44.2375, 27.9566, 45.9531, 22.1295, 36.6038, 21.2266, 40.6932, 13.1366, 44.0022, 8.245, 41.1381, -0.813766, 33.6829, 7.02087, 16.4563 )
 
 [node name="Foot" type="AnimationPlayer" parent="Bot"]
-anims/jum = SubResource( 3 )
-anims/stand = SubResource( 4 )
-anims/walk = SubResource( 5 )
+anims/jum = SubResource( 4 )
+anims/stand = SubResource( 5 )
+anims/walk = SubResource( 6 )
 
 [node name="Action" type="AnimationPlayer" parent="Bot"]
-anims/dodge = SubResource( 6 )
-anims/fencing = SubResource( 7 )
-anims/not_action = SubResource( 8 )
-anims/over = SubResource( 9 )
-anims/over_stop = SubResource( 10 )
-anims/throwing_stars = SubResource( 11 )
+anims/dodge = SubResource( 7 )
+anims/fencing = SubResource( 8 )
+anims/not_action = SubResource( 9 )
+anims/over = SubResource( 10 )
+anims/over_stop = SubResource( 11 )
+anims/throwing_stars = SubResource( 12 )
+anims/turn_around = SubResource( 13 )
 
 [node name="disappear" type="Timer" parent="Bot"]
 wait_time = 10.0
@@ -1132,20 +1236,26 @@ stream = ExtResource( 7 )
 volume_db = 20.618
 
 [node name="swordNinja" type="KinematicBody2D" parent="."]
-position = Vector2( 128.108, 12.0312 )
-rotation = -0.134117
+position = Vector2( 70.0858, -328.475 )
+rotation = 1.40435
 scale = Vector2( 1, 1 )
 collision_layer = 64
-collision_mask = 0
+collision_mask = 3
 
 [node name="area" type="CollisionPolygon2D" parent="swordNinja"]
 polygon = PoolVector2Array( 105.318, 10.5023, 147.949, 12.6756, 213.097, 16.6617, 283.349, 19.7997, 283.55, 17.2979, 277.621, 6.49662, 260.055, -6.7524, 106.164, -10.9586 )
 disabled = true
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="swordNinja"]
+polygon = PoolVector2Array( 105.838, -10.1704, 105.328, -14.2985, 97.105, -15.0428, 94.0863, -10.9817, 39.3568, -10.2548, -4.78644, -9.32718, -5.72037, 8.89368, 13.0551, 11.6032, 43.6713, 10.4189, 71.9238, 9.77819, 89.6124, 7.76037, 89.4896, 14.2298, 101.84, 14.4641, 104.226, 12.7443 )
+
 [node name="areaSword" type="Area2D" parent="swordNinja"]
 
 [node name="area" type="CollisionPolygon2D" parent="swordNinja/areaSword"]
-polygon = PoolVector2Array( 105.318, 10.5023, 147.949, 12.6756, 213.097, 16.6617, 283.349, 19.7997, 283.55, 17.2979, 277.621, 6.49662, 260.055, -6.7524, 106.164, -10.9586 )
+polygon = PoolVector2Array( 105.318, 10.5023, 147.949, 12.6756, 213.097, 16.6617, 283.349, 19.7997, 283.55, 17.2979, 277.621, 6.49662, 260.055, -6.7524, 240.088, -7.29819, 105.824, -9.89001 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="swordNinja/areaSword"]
+polygon = PoolVector2Array( 105.838, -10.1704, 105.328, -14.2985, 97.105, -15.0428, 94.0863, -10.9817, 39.3568, -10.2548, -4.78644, -9.32718, -5.72037, 8.89368, 13.0551, 11.6032, 43.6713, 10.4189, 71.9238, 9.77819, 89.6124, 7.76037, 89.4896, 14.2298, 101.84, 14.4641, 104.226, 12.7443 )
 
 [node name="ThrowingStars" type="KinematicBody2D" parent="."]
 collision_layer = 64
@@ -1166,14 +1276,14 @@ collision_layer = 64
 collision_mask = 6
 
 [node name="area" type="CollisionShape2D" parent="ThrowingStars/stop"]
-shape = SubResource( 12 )
+shape = SubResource( 14 )
 
 [node name="area" type="CollisionShape2D" parent="ThrowingStars"]
-shape = SubResource( 12 )
+shape = SubResource( 14 )
 
 [node name="Sprite" type="Sprite" parent="ThrowingStars"]
 scale = Vector2( 2.87572, 30.6797 )
-texture = SubResource( 14 )
+texture = SubResource( 16 )
 
 [connection signal="body_entered" from="Bot/NodeBody/fencing" to="Bot" method="StartFencing"]
 [connection signal="body_exited" from="Bot/NodeBody/fencing" to="Bot" method="resetAction"]
@@ -1181,5 +1291,6 @@ texture = SubResource( 14 )
 [connection signal="body_entered" from="Bot/NodeBody/areaBody" to="Bot" method="Over"]
 [connection signal="body_entered" from="Bot/NodeBody/fencingLaoSeej" to="Bot" method="StartFencing"]
 [connection signal="body_exited" from="Bot/NodeBody/fencingLaoSeej" to="Bot" method="resetAction"]
+[connection signal="body_entered" from="Bot/NodeBody/turn_aroud" to="Bot" method="turnAround"]
 [connection signal="body_entered" from="swordNinja/areaSword" to="Bot" method="stopActionThrowingStars"]
 [connection signal="body_entered" from="ThrowingStars/stop" to="ThrowingStars" method="stopAttack"]

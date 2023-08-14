@@ -77,6 +77,20 @@ public class Ninja : KinematicBody2D
     }
 
     // -------------------------------------------กันชน----------------------------------------------
+    public void turnAround(Node body){
+        if(!ninja_over && (body.Name=="lao_seeb" || body.Name=="swordPlayer")){
+            action.Play("turn_around");
+            if(speed>0){
+                GD.Print("right");
+                changDirection(1);
+            }
+            else{
+                GD.Print("left");
+                changDirection(-1);
+            }
+            GD.Print("trun_around");
+        }
+    }
     public void Over(Node body){
         if (!ninja_over){
                 foot.Play("stand");
@@ -111,7 +125,10 @@ public class Ninja : KinematicBody2D
     }
     public void startDodge(Node body){
         if (!ninja_over && body.Name=="lao_seeb"){
-            action.Play("dodge");
+            if (action.CurrentAnimation!="trun_around"){
+                GD.Print(">> : "+ action.CurrentAnimation);
+                action.Play("dodge");
+            }
         }
     }
     public void stopActionThrowingStars(Node body){
@@ -144,6 +161,7 @@ public class Ninja : KinematicBody2D
     // ------------------------------------------Method----------------------------------------------
     public void changDirection(int scale){
         if (area.Scale.x!=scale){
+            GD.Print("join");
             Vector2 vector = Vector2.One;
             vector.x=scale;
             area.SetScale(vector);

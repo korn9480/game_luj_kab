@@ -71,5 +71,5 @@ scale = Vector2( 1, 1.07673 )
 shape = SubResource( 5 )
 
 [connection signal="body_entered" from="Floor/joinCheckpoint" to="." method="playerJoinCheckpoint"]
-[connection signal="body_entered" from="Floor/helpNkaujCoob" to="." method="helpNkaujCoob"]
 [connection signal="body_entered" from="Floor/helpNkaujCoob" to="." method="PlayerBack"]
+[connection signal="body_entered" from="Floor/helpNkaujCoob" to="." method="helpNkaujCoob"]

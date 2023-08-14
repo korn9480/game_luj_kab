@@ -14,7 +14,7 @@ position = Vector2( 514.899, 319.729 )
 script = ExtResource( 5 )
 
 [node name="checkpointOne" parent="." instance=ExtResource( 3 )]
-position = Vector2( -0.161621, 0.122375 )
+position = Vector2( -0.161621, 1.53656 )
 
 [node name="Ninja" parent="checkpointOne" instance=ExtResource( 6 )]
 position = Vector2( 400, 0 )
@@ -117,3 +117,4 @@ position = Vector2( 1000, 0 )
 stream = ExtResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1.49805, 0 )
